@@ -1,4 +1,4 @@
-# Project Name
+# Computational Intelligence 
 
 This repository outlines the projects done in ECE 8833 Computational Intelligence. All projects are done in Matlab
 
