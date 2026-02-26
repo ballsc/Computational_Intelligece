@@ -23,12 +23,17 @@ while time <= max_time
     
     N = format_n(cells);
 
-    delta_h = calc_wirelength(N) - wirelength;
+    new_wirelength = calc_wirelength(N);
+
+    delta_h = new_wirelength - wirelength;
 
     % New best wirelength
     if delta_h < 0
-        
+        best = new_wirelength;
+        wirelength = new_wirelength;
     end
+    
+    if rand() < exp(-delta_h/temp), wirelength = new_wirelength; end
 
     M = M * beta;
     temp = temp * alpha;
